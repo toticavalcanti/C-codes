@@ -1,3 +1,4 @@
+
 #include <stdio.h> /* Instrução de pré-processamento, habilita nosso programa a usar essa biblioteca
 de entradas e saídas, possui funções como scanf e printf*/
 #include <stdlib.h>/*Instrução de pré-processamento, habilita nosso programa a usar essa biblioteca,
@@ -20,34 +21,37 @@ void main(void)
 
 
     printf("\n Sexo M ou F ? \n ");
-    scanf("%c",&sexo);
+    scanf("%c",&sexo); // Captura o caracter referente ao sexo
     fflush(stdin);
 
+	//Se sexo contiver um M ou m, strcpy( ) copia a string " Sr." para o array saudacao
     if ((sexo=='M') || (sexo=='m'))
     {
         strcpy (saudacao," Sr.");
     }
-    else
+    else // Caso contrário strcpy( ) copia a string " Sra." para o array saudacao
     {
         strcpy (saudacao," Sra.");
     }
 
     tentativa = 3;
-    while (tentativa > 0)
+    while (tentativa > 0) // enquanto tentativa for maior que 3
     {
         printf("\n\n%s %s, Digite a sua senha: \n ", saudacao, nome);
-        gets(senha);
+        gets(senha); // captura a senha digitada 
         fflush(stdin);
-        if ( strcmp (senha,"provaav1") == 0)
+		// strcmp ( ) compara a string referente a senha digitada pelo usuário com a string "provaav1".
+        if ( strcmp (senha,"provaav1") == 0) // Se o usuário digitar provaav1, a senha estará correta, a execução entra no if.
         {
-            tentativa = 0;
+            tentativa = 0; //Zera tentativas, já que a senha está correta
             printf(" \nSenha Correta \n Você digitou a senha \n");
-            for(l = 0; l < strlen (senha); l++)
-            printf(" %c ", senha[l]);
+			//Percorre caracter por caracter da string senha.
+            for(l = 0; l < strlen (senha); l++) 
+            printf(" %c ", senha[l]); //imprime cada caracter da string
         }
-        else
+        else // caso contrário, isto é, o usuário digitou algo diferente de "provaav1".
         {
-            tentativa--;
+            tentativa--; // decrementa tentativa
             if (tentativa > 0)
                 printf("\n Senha Errada!!!\n Você tem mais %d chances!!!", tentativa);
             else
