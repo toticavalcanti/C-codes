@@ -40,12 +40,12 @@ void main(void)
         printf("\n\n%s %s, Digite a sua senha: \n ", saudacao, nome);
         gets(senha); // captura a senha digitada 
         fflush(stdin);
-		// strcmp ( ) compara a string referente a senha digitada pelo usuário com a string "provaav1".
+	// strcmp ( ) compara a string referente a senha digitada pelo usuário com a string "provaav1".
         if ( strcmp (senha,"provaav1") == 0) // Se o usuário digitar provaav1, a senha estará correta, a execução entra no if.
         {
             tentativa = 0; //Zera tentativas, já que a senha está correta
             printf(" \nSenha Correta \n Você digitou a senha \n");
-			//Percorre caracter por caracter da string senha.
+		//Percorre caracter por caracter da string senha.
             for(l = 0; l < strlen (senha); l++) 
             printf(" %c ", senha[l]); //imprime cada caracter da string
         }
