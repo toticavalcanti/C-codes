@@ -1,6 +1,5 @@
-
-#include <stdio.h> /* Instrução de pré-processamento, habilita nosso programa a usar essa biblioteca
-de entradas e saídas, possui funções como scanf e printf*/
+#include <stdio.h>/* Instrução de pré-processamento, habilita nosso programa a usar essa
+                    Biblioteca de entrada e saída, possui funções como scanf e printf*/
 #include <stdlib.h>/*Instrução de pré-processamento, habilita nosso programa a usar essa biblioteca,
 para poder usar o system("PAUSE"); */
 #include <locale.h> /*Instrução de pré-processamento, habilita nosso programa a usar essa biblioteca,
@@ -17,7 +16,7 @@ void main(void)
 
     printf("\n Qual o seu nome?\n ");
     gets (nome); //Captura o nome, pegando caracter por caracter até que o usuário aperte o enter
-    fflush(stdin); //Limpa o buffer do teclado
+    fflush(stdin);//Limpa o buffer do teclado
 
 
     printf("\n Sexo M ou F ? \n ");
@@ -38,7 +37,7 @@ void main(void)
     while (tentativa > 0) // enquanto tentativa for maior que 3
     {
         printf("\n\n%s %s, Digite a sua senha: \n ", saudacao, nome);
-        gets(senha); // captura a senha digitada 
+        gets(senha); // captura a senha digitada
         fflush(stdin);
 	// strcmp ( ) compara a string referente a senha digitada pelo usuário com a string "provaav1".
         if ( strcmp (senha,"provaav1") == 0) // Se o usuário digitar provaav1, a senha estará correta, a execução entra no if.
@@ -46,7 +45,7 @@ void main(void)
             tentativa = 0; //Zera tentativas, já que a senha está correta
             printf(" \nSenha Correta \n Você digitou a senha \n");
 		//Percorre caracter por caracter da string senha.
-            for(l = 0; l < strlen (senha); l++) 
+            for(l = 0; l < strlen (senha); l++)
             printf(" %c ", senha[l]); //imprime cada caracter da string
         }
         else // caso contrário, isto é, o usuário digitou algo diferente de "provaav1".
