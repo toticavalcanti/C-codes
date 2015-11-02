@@ -27,7 +27,7 @@ int pilhaCheia(TPilha *pPilha);
 void converteDecBin(TPilha *pPilha, int decimal);
 void printResposta(TPilha *pPilha, int decimal);
 int menu();
-void removePilha(TPilha *pPilha);
+
 
 //função pop, retira o nó do topo da pilha
 int retiraPilha(TPilha *pPilha, int *pNo)

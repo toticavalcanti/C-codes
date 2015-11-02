@@ -16,10 +16,9 @@ typedef struct
     int vNo[MAX];
     int topo;
 } TPilha;
+
 //Protótipos das funções
 int retiraPilha(TPilha *pPilha, int *pNo);
-void leNo(int *pNo);
-void escreveNo(int *pNo);
 void inicializaPilha(TPilha *pPilha);
 int inserePilha(TPilha *pPilha, int *pNo);
 int pilhaVazia(TPilha *pPilha);
@@ -46,18 +45,6 @@ int retiraPilha(TPilha *pPilha, int *pNo)
     //retorna 1 indicando que o nó foi retirado do topo
     return 1;
 
-}
-
-//Métodos de acesso
-void leNo(int *pNo)
-{
-    scanf("%d", pNo);
-}
-
-//Imprime o valor no nó
-void escreveNo(int *pNo)
-{
-    printf("%d", *pNo);
 }
 
 //Inicializa pilha2
