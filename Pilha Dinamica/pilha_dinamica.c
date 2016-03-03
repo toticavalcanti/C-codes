@@ -26,7 +26,6 @@ node *pop(node *PILHA);
 int main(void)
 {
 
-    /*Ativa a configuração da biblioteca locale.h para português*/
     setlocale(LC_ALL, "Portuguese"); //Ativa a configuração da biblioteca locale.h para português
 
     node *PILHA = (node *) malloc(sizeof(node));
@@ -198,7 +197,7 @@ void push(node *PILHA)
 }
 
 
-node *pop(node *PILHA)
+node* pop(node *PILHA)
 {
     if(PILHA->prox == NULL)
     {
